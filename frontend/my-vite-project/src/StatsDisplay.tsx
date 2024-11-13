@@ -7,6 +7,9 @@ import { CardType } from "./types";
 
 interface StatsDisplayProps {
   username: string;
+  defuseCount: number;
+  gamesWon: number;
+  cardsRemaining: number;
 }
 
 const StatsDisplay: React.FC<StatsDisplayProps> = ({ username }) => {
