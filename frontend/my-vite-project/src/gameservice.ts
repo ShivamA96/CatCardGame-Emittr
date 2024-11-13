@@ -1,7 +1,7 @@
 // gameService.ts
 import { CardType } from "./types";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "http://host.docker.internal:8080";
 
 export const gameService = {
   startGame: async (username: string): Promise<{ game_id: string }> => {

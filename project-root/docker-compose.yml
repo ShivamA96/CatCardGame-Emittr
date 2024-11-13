@@ -20,7 +20,7 @@ services:
       - "6379:6379"
 
   backend:
-    build: .
+    image: shivamarora96/catcardgame-backend:latest
     container_name: backend
     ports:
       - "8080:8080"
