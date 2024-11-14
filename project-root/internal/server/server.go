@@ -39,12 +39,12 @@ func (s *Server) Run() error {
 
 func (s *Server) setupRouter() *gin.Engine {
     r := gin.Default()
-
     // Configure CORS
     r.Use(cors.New(cors.Config{
-        AllowOrigins:     []string{"http://localhost:5173"}, // Update with your frontend URL
-        AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
+        AllowOrigins:     []string{"http://13.233.118.48", "*"}, // Update with your frontend URL
+        AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
         AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
+        ExposeHeaders:    []string{"Content-Length"},
         AllowCredentials: true,
     }))
 
